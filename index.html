@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<title>Multiple Katzen</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style media="screen">
+body { background-color;
+}
+
+</style>
+
+		<script>
+			"use strict";
+			function fKatzen() {
+
+
+				var vAusgabeHtml;
+				var vAnzahlKatzen;
+
+				vAnzahlKatzen = document.getElementById("idAnzahlKatzen").value;
+
+				vAusgabeHtml = "";
+				vAusgabeHtml = vAusgabeHtml + "Jetzt kommen " + vAnzahlKatzen + " Katzen...";
+				
+				var vZaehler;
+
+				vZaehler = 1;
+				while (vZaehler <= vAnzahlKatzen) {
+					vAusgabeHtml = vAusgabeHtml + "<br>^.^"
+					vZaehler = vZaehler + 1;
+				}
+
+				document.getElementById("idAusgabeHtml").innerHTML = vAusgabeHtml;
+	}
+		</script>
+	</head>
+
+	<body>
+		<h1>Multiple Katzen</h1>
+		Anzahl Katzen: <input id="idAnzahlKatzen" type="text" value="2"><br /><br />
+		<button onClick="fKatzen();">Katzen zeichnen</button><br /><br />
+		<div id="idAusgabeHtml">Hier kommt beim Klicken auf den Button ein Ergebnis.</div>
+	</body>
+</html>
